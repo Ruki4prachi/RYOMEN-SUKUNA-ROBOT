@@ -52,10 +52,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello, {}
-ɪ'ᴍ ʀʏᴏᴍᴇɴ ꜱᴜᴋᴜɴᴀ ᴛʜᴇ ᴄᴜʀꜱᴇ ᴋɪɴɢ.
+Konnichiwa , {} 
+I'm Ruki Mukami , the Brain of Mansion.
 
-ɪ'ᴍ ᴀɴ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ꜰʀᴏᴍ ᴊᴜᴊᴜᴛꜱᴜ ᴋᴀɪꜱᴇɴ!!
+I'm an anime themed bot from the Mortal Mansion!!
 
 You can find the list of available commands with /help
 """
@@ -80,7 +80,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/f18ac5dd7c77213308b28.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/60313740175211b4ac0af.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
@@ -202,28 +202,24 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕ Add sukuna To Your Group!",
+                            text="➕ Add Ruki To Your Group!",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                      ],
                      [
                          InlineKeyboardButton(
-                             text="⚙️ Support Group",
+                             text="⚙️ Ruki's support Mansion",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🔔Updates Channel",
-                             url="https://t.me/SukunaRobotUpdates")
+                             url="https://t.me/ruki_mukami_updates")
                      ],
                      [
                          InlineKeyboardButton(
                              text="Log Channel",
-                             url="https://t.me/sukunaRobotlogs")
-                     ],
-                     [
-                         InlineKeyboardButton(
-                             text="💾 Source Code",
-                             url="https://github.com/Eren2op/RYOMEN-SUKUNA-ROBOT")
+                             url="https://t.me/Ruki_global_logs")
                      ]]))
+                  
     else:
         update.effective_message.reply_text(
             "I'm online!\n<b>Up since:</b> <code>{}</code>".format(uptime),
@@ -543,7 +539,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[Gambare Gambare!](https://telegra.ph/file/be66ab5f18fa9c2657fd8.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I'd love to taste you !](https://telegra.ph/file/b74bbe7d711b2a637a6eb.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
